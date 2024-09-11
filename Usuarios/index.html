@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPM Wear</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="Logo">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">Olá, Kaiky</span>
+                    <span class="profession">Gerente</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-menu icon' ></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cart-alt icon' ></i>
+                            <span class="text nav-text">Vendas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-male-female icon' ></i>
+                            <span class="text nav-text">Clientes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-closet icon' ></i>
+                            <span class="text nav-text">Produtos</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-package icon'></i>
+                            <span class="text nav-text">Estoque</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-store icon' ></i>
+                            <span class="text nav-text">Fornecedores</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Relatórios</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Usuários</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+            <div class="form">
+                <form action="#">
+                    <div class="form-header">
+                        <div class="tittle">
+                            <h1>Cadastro de Usuários</h1>
+                        </div>
+                    </div>
+                       
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="firstname">Nome</label>
+                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="lastname">Sobrenome</label>
+                            <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="password">Senha</label>
+                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="confirmpassword">Confirme sua senha</label>
+                            <input id="confirmpassword" type="password" name="confirmpassword" placeholder="Confirme sua senha" required>
+                        </div>
+                    </div>
+
+                    <div class="cargo-inputs">
+                        <div class="cargo-title">
+                            <h6>Cargos</h6>
+                        </div>
+
+                        <div class="cargo-gruop">
+                            <div class="cargo-input">
+                                <input type="radio" id="atendente" name="cargo" value="Atendente" required>
+                                <label for="atendente">Atendente</label>
+                            </div>
+                            <div class="cargo-input">
+                                <input type="radio" id="estoquista" name="cargo" value="Estoquista">
+                                <label for="estoquista">Estoquista</label>
+                            </div>
+                            <div class="cargo-input">
+                                <input type="radio" id="gerente" name="cargo" value="Gerente">
+                                <label for="gerente">Gerente</label>
+                            </div>
+                            <div class="cargo-input">
+                                <input type="radio" id="adm" name="cargo" value="Administrador">
+                                <label for="adm">Administrador</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cadastrar-button">
+                        <button><a>Cadastrar</a></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-container">
+                <div class="table-title">Usuários Cadastrados</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Usuário</th>
+                            <th>Cargo</th>
+                            <th>Senha</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <tr>
+                                <td>1</td>
+                                <td>João Silva</td>
+                                <td>jsilva</td>
+                                <td>Administrador</td>
+                                <td>******</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Maria Souza</td>
+                                <td>msouza</td>
+                                <td>Estoquista</td>
+                                <td>******</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Lucas Pereira</td>
+                                <td>lpereira</td>
+                                <td>Gerente</td>
+                                <td>******</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ana Costa</td>
+                                <td>acosta</td>
+                                <td>Atendente</td>
+                                <td>******</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Fernanda Lima</td>
+                                <td>flima</td>
+                                <td>Administrador</td>
+                                <td>******</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Roberto Oliveira</td>
+                                <td>roliveira</td>
+                                <td>Gerente</td>
+                                <td>******</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>

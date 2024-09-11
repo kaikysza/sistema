@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPM Wear</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
+</head>
+<body>
+    <!-- Menu Lateral -->
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="Logo">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">Olá, Kaiky</span>
+                    <span class="profession">Gerente</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-menu icon' ></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cart-alt icon' ></i>
+                            <span class="text nav-text">Vendas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-male-female icon' ></i>
+                            <span class="text nav-text">Clientes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-closet icon' ></i>
+                            <span class="text nav-text">Produtos</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-package icon'></i>
+                            <span class="text nav-text">Estoque</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-store icon' ></i>
+                            <span class="text nav-text">Fornecedores</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Relatórios</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Usuários</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Forms Cadastro -->
+    <section class="home">
+            <div class="form">
+                <form action="#">
+                    <div class="form-header">
+                        <div class="tittle">
+                            <h1>Cadastro de Vendas</h1>
+                        </div>
+                    </div>
+                       
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="cliente">Cliente</label>
+                            <select id="cliente" name="cliente" required>
+                                <option value="" disabled selected>Selecione um cliente</option>
+                                <option value="cliente1">NA</option>
+                                <option value="cliente2">Ana julia</option>
+                                <option value="cliente3">Luiz</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="produto">Produto</label>
+                            <select id="produto" name="produto" required>
+                                <option value="" disabled selected>Selecione um produto</option>
+                                <option value="produto1">Camiseta Senna</option>
+                                <option value="produto2">Camiseta Drift King</option>
+                                <option value="produto3">Camiseta Lobo de Wall Street</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="valor">Valor</label>
+                            <input id="valor" type="text" name="valor" placeholder="Digite o valor" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="forma-pagamento">Forma de Pagamento</label>
+                            <select id="forma-pagamento" name="forma-pagamento" required>
+                                <option value="" disabled selected>Selecione uma forma de pagamento</option>
+                                <option value="cartao">Pix</option>
+                                <option value="boleto">Cartão</option>
+                                <option value="pix">Boleto</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="funcionario">Funcionário</label>
+                            <input id="funcionario" type="text" name="funcionario" placeholder="Digite o nome de usuário" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="data">Data</label>
+                            <input id="data" type="date" name="data" required>
+                        </div>
+                    </div>                 
+                    <div class="cadastrar-button">
+                        <button><a>Cadastrar</a></button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Tabela de Vendas -->
+            <div class="table-container">
+                <div class="table-title">Vendas Cadastrados</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Produto</th>
+                            <th>Valor</th>
+                            <th>Forma de Pagamento</th>
+                            <th>Data</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>João Silva</td>
+                            <td>Camiseta Senna</td>
+                            <td>R$ 99,90</td>
+                            <td>Cartão de Crédito</td>
+                            <td>05/09/2024</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maria Souza</td>
+                            <td>Camiseta Wolf</td>
+                            <td>R$ 149,90</td>
+                            <td>Boleto</td>
+                            <td>04/09/2024</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lucas Pereira</td>
+                            <td>Camiseta DK</td>
+                            <td>R$ 49,90</td>
+                            <td>Pix</td>
+                            <td>03/09/2024</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ana Costa</td>
+                            <td>Camiseta Angels</td>
+                            <td>R$ 89,90</td>
+                            <td>Cartão de Débito</td>
+                            <td>02/09/2024</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Fernanda Lima</td>
+                            <td>Camiseta Porsche</td>
+                            <td>R$ 19,90</td>
+                            <td>Boleto</td>
+                            <td>01/09/2024</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>

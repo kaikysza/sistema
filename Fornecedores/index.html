@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPM Wear</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="Logo">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">Olá, Kaiky</span>
+                    <span class="profession">Gerente</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-menu icon' ></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cart-alt icon' ></i>
+                            <span class="text nav-text">Vendas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-male-female icon' ></i>
+                            <span class="text nav-text">Clientes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-closet icon' ></i>
+                            <span class="text nav-text">Produtos</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-package icon'></i>
+                            <span class="text nav-text">Estoque</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-store icon' ></i>
+                            <span class="text nav-text">Fornecedores</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Relatórios</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Usuários</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+            <div class="form">
+                <form action="#">
+                    <div class="form-header">
+                        <div class="tittle">
+                            <h1>Cadastro de Fornecedores</h1>
+                        </div>
+                    </div>
+                       
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="firstname">Nome</label>
+                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="cnpj">CNPJ</label>
+                            <input id="cnpj" type="text" name="cnpj" placeholder="Digite o CNPJ" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="phone">Telefone</label>
+                            <input id="phone" type="tel" name="phone" placeholder="Digite seu telefone" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="description">Descrição</label>
+                            <select id="description" name="description" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="opcao1">Tescido</option>
+                                <option value="opcao2">Malha</option>
+                                <option value="opcao3">Hibana</option>
+                                <option value="opcao4">Molde</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cadastrar-button">
+                        <button><a>Cadastrar</a></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-container">
+                <div class="table-title">Fornecedores Cadastrados</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>CNPJ</th>
+                            <th>Telefone</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <tr>
+                                <td>1</td>
+                                <td>João Silva</td>
+                                <td>Fornecedor de Tecido</td>
+                                <td>12.345.678/0001-90</td>
+                                <td>(11) 98765-4321</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Maria Oliveira</td>
+                                <td>Fornecedor de Malha</td>
+                                <td>98.765.432/0001-01</td>
+                                <td>(21) 99876-5432</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Pedro Santos</td>
+                                <td>Fornecedor de Hibana</td>
+                                <td>23.456.789/0001-23</td>
+                                <td>(31) 91234-5678</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ana Costa</td>
+                                <td>Fornecedor de Molde</td>
+                                <td>34.567.890/0001-34</td>
+                                <td>(41) 92345-6789</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Lucas Pereira</td>
+                                <td>Fornecedor de Renda</td>
+                                <td>45.678.901/0001-45</td>
+                                <td>(51) 93456-7890</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Fernanda Lima</td>
+                                <td>Fornecedor de Elastano</td>
+                                <td>56.789.012/0001-56</td>
+                                <td>(61) 94567-8901</td>
+                                <td class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </td>
+                            </tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>

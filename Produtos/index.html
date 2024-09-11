@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPM Wear</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="Logo">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">Olá, Kaiky</span>
+                    <span class="profession">Gerente</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-menu icon' ></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cart-alt icon' ></i>
+                            <span class="text nav-text">Vendas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-male-female icon' ></i>
+                            <span class="text nav-text">Clientes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-closet icon' ></i>
+                            <span class="text nav-text">Produtos</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-package icon'></i>
+                            <span class="text nav-text">Estoque</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-store icon' ></i>
+                            <span class="text nav-text">Fornecedores</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Relatórios</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Usuários</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+            <div class="form">
+                <form action="#">
+                    <div class="form-header">
+                        <div class="tittle">
+                            <h1>Cadastro de Produtos</h1>
+                        </div>
+                    </div>                                      
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="firstname">Nome</label>
+                            <input id="firstname" type="text" name="firstname" placeholder="Digite o nome do produto" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="collection">Coleção</label>
+                            <select id="collection" name="collection" required>
+                                <option value="" disabled selected>Selecione uma coleção</option>
+                                <option value="colecao1">Coleção Masculina</option>
+                                <option value="colecao2">Coleção Feminina</option>
+                                <option value="colecao3">Coleção Inverno</option>
+                            </select>
+                        </div>
+                    </div>                   
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="colors">Cores</label>
+                            <select id="colors" name="colors" required>
+                                <option value="" disabled selected>Selecione uma cor</option>
+                                <option value="branco">Branco</option>
+                                <option value="preto">Preto</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="price">Preço</label>
+                            <input id="price" type="number" name="price" placeholder="Digite o preço" step="0.01" required>
+                        </div>
+                    </div>               
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="sizes">Tamanhos</label>
+                            <div class="size-group">
+                                <div class="size-input">
+                                    <label for="size-p">P:</label>
+                                    <input id="size-p" type="number" placeholder="Quantidade" oninput="updateTotal()">
+                                </div>
+                                <div class="size-input">
+                                    <label for="size-m">M:</label>
+                                    <input id="size-m" type="number" placeholder="Quantidade" oninput="updateTotal()">
+                                </div>
+                            </div>              
+                            <div class="size-group">
+                                <div class="size-input">
+                                    <label for="size-g">G:</label>
+                                    <input id="size-g" type="number" placeholder="Quantidade" oninput="updateTotal()">
+                                </div>
+                                <div class="size-input">
+                                    <label for="size-gg">GG:</label>
+                                    <input id="size-gg" type="number" placeholder="Quantidade" oninput="updateTotal()">
+                                </div>
+                            </div>
+                            <div class="size-input">
+                                <label for="total-quantity">Total:</label>
+                                <input id="total-quantity" type="text" placeholder="Total" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="image">Imagem</label>
+                            <div class="upload-box">
+                                <input type="file" id="image" name="image" accept="image/*" required>
+                                <span class="upload-label">Selecione uma Imagem</span>
+                            </div>
+                        </div>
+                    </div>              
+                    
+                       
+                    
+                    <div class="cadastrar-button">
+                        <button><a>Cadastrar</a></button>
+                    </div>
+                </form>
+            </div>
+
+        <div class="table-container">
+            <div class="table-title">Produtos Cadastrados</div>      
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Imagem</th>
+                        <th>Nome</th>
+                        <th>Coleção</th>
+                        <th>Cores</th>
+                        <th>Tamanhos</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="Camiseta1.jpg" alt="Produto 1" class="product-img"></td>
+                        <td>Camiseta Wolf</td>
+                        <td>Masculino</td>
+                        <td>Preto, Branco</td>
+                        <td>P, M, G, GG</td>
+                        <td>R$ 125,00</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="Camiseta2.jpg" alt="Produto 2" class="product-img"></td>
+                        <td>Camiseta Senna</td>
+                        <td>Feminino</td>
+                        <td>Branco</td>
+                        <td>Fora de estoque</td>
+                        <td>R$ 125,00</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="Camiseta3.jpg" alt="Produto 3" class="product-img"></td>
+                        <td>Camiseta Drift King</td>
+                        <td>Inverno</td>
+                        <td>Preto</td>
+                        <td>P, M, G</td>
+                        <td>R$ 125,00</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><img src="Camiseta4.jpg" alt="Produto 3" class="product-img"></td>
+                        <td>Camiseta Hamilton</td>
+                        <td>Masculino</td>
+                        <td>Branco, Preto</td>
+                        <td>P, M, G</td>
+                        <td>R$ 125,00</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><img src="Camiseta5.jpg" alt="Produto 3" class="product-img"></td>
+                        <td>Camiseta Porsche</td>
+                        <td>Feminino</td>
+                        <td>Branco</td>
+                        <td>P, M, G</td>
+                        <td>R$ 125,00</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+    <script>
+        function updateTotal() {
+            const p = parseInt(document.getElementById('size-p').value) || 0;
+            const m = parseInt(document.getElementById('size-m').value) || 0;
+            const g = parseInt(document.getElementById('size-g').value) || 0;
+            const gg = parseInt(document.getElementById('size-gg').value) || 0;
+            const total = p + m + g + gg;
+        document.getElementById('total-quantity').value = total;
+        }
+    </script>
+</body>
+</html>
