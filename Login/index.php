@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php if (isset($_SESSION['msg'])): ?>
+        <p style="color: red;"><?php echo $_SESSION['msg']; ?></p>
+        <?php unset($_SESSION['msg']);?>
+    <?php endif; ?>
     <div class="wrapper">
         <div class="form-box login">
             <img src="logo.png" alt="Logo" class="logo">
             <h2>Faça seu Acesso</h2>
-            <form action="verifica.php" method="post">
+            <form action="../Classes/verifica.php" method="post">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" name="usuario" required>
@@ -25,11 +29,6 @@
                 </div>
                 <button type="submit" class="btn">Acessar</button>
             </form>
-            <?php if (isset($_GET['error'])): ?>
-                <div class="error-message" style="color: red;">
-                    <?php echo htmlspecialchars($_GET['error']); ?>
-                </div>
-            <?php endif; ?>
         </div>
     </div>
 
